@@ -1,0 +1,8 @@
+- id: check-added-large-files
+  name: check for added large files
+  description: prevents giant files from being committed. Like `jujutsu`.
+  entry: go-hooks check-added-large-files
+  language: golang
+  stages: [pre-commit, pre-push, manual]
+  pass_filenames: false
+  minimum_pre_commit_version: 4.2.0
